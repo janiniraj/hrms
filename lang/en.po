@@ -3,11 +3,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: English\n"
-"Language-Team: IceHrm\n"
+"Language-Team: HRMS\n"
 "Last-Translator: Thilina Hasantha\n"
 "MIME-Version: 1.0\n"
 "Project-Id-Version: 18.0\n"
-"Report-Msgid-Bugs-To: https://icehrm.com\n"
+"Report-Msgid-Bugs-To: https://HRMS.com\n"
 
 msgid "Save"
 msgstr "Save"
@@ -1353,8 +1353,8 @@ msgstr "Terminated Employee Data"
 msgid "Employee Saved Successfully"
 msgstr "Employee Saved Successfully"
 
-msgid "Employee needs a User to login to IceHrm. Do you want to create a user for this employee now?"
-msgstr "Employee needs a User to login to IceHrm. Do you want to create a user for this employee now?"
+msgid "Employee needs a User to login to HRMS. Do you want to create a user for this employee now?"
+msgstr "Employee needs a User to login to HRMS. Do you want to create a user for this employee now?"
 
 msgid "You can do this later through Users module if required."
 msgstr "You can do this later through Users module if required."
@@ -1598,5 +1598,3 @@ msgstr "Apply"
 
 msgid "Back"
 msgstr "Back"
-
-

@@ -1,7 +1,7 @@
 <?php
 if(!defined('SIGN_IN_ELEMENT_MAPPING_FIELD_NAME')){define('SIGN_IN_ELEMENT_MAPPING_FIELD_NAME','employee');}
 
-if(!defined('APP_NAME')){define('APP_NAME','ICE Hrm');}
+if(!defined('APP_NAME')){define('APP_NAME','HRMS');}
 if(!defined('FB_URL')){define('FB_URL', 'https://www.facebook.com/icehrm');};
 if(!defined('TWITTER_URL')){define('TWITTER_URL', 'https://twitter.com/icehrmapp');};
 
