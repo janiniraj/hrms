@@ -6,7 +6,7 @@ service mysql start
 if [ -d "/usr/share/nginx/www/" ]; then
     echo 'Already Installed'
 else
-    echo 'Installing IceHrm'
+    echo 'Installing HRMS'
     cd /usr/share/nginx
     curl -s https://api.github.com/repos/gamonoid/icehrm/releases/latest | jq -r ".assets[] | select(.name) | .browser_download_url" | grep '.zip' | xargs wget
     ls | grep 'zip' | xargs unzip
@@ -17,10 +17,10 @@ else
 
     echo "Following will be needed during installation"
     echo "--------------------------------------------"
-    echo 'IceHrm Database : icehrmdb'
-    echo 'IceHrm User : icehrmuser'
-    echo 'IceHrm User Password : icehrmuserpwd'
-    echo 'IceHrm Database host : localhost'
+    echo 'HRMS Database : icehrmdb'
+    echo 'HRMS User : icehrmuser'
+    echo 'HRMS User Password : icehrmuserpwd'
+    echo 'HRMS Database host : localhost'
 
     echo 'Please visit your docker installation url to begin installation.'
 

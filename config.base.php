@@ -18,7 +18,7 @@ define('CACHE_VALUE', '20.2.0.OS');
 define('VERSION_NUMBER', '2020');
 define('VERSION_DATE', '28/09/2017');
 
-if(!defined('CONTACT_EMAIL')){define('CONTACT_EMAIL','icehrm@gamonoid.com');}
+if(!defined('CONTACT_EMAIL')){define('CONTACT_EMAIL','hrms@gamonoid.com');}
 if(!defined('KEY_PREFIX')){define('KEY_PREFIX','IceHrm');}
 if(!defined('APP_SEC')){define('APP_SEC','dbcs234d2saaqw');}
 

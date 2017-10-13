@@ -196,7 +196,7 @@ var modJs = modJsList['tabEmployee'];
                 <h3 style="font-size: 17px;"><?=t('Employee Saved Successfully')?></h3>
             </div>
             <div class="modal-body">
-				<?=t('Employee needs a User to login to IceHrm. Do you want to create a user for this employee now?')?> <br/><br/><?=t('You can do this later through Users module if required.')?>
+				<?=t('Employee needs a User to login to HRMS. Do you want to create a user for this employee now?')?> <br/><br/><?=t('You can do this later through Users module if required.')?>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-primary" onclick="modJs.createUser();">Yes</button>

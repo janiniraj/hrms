@@ -44,11 +44,11 @@ if(empty($groups)){
 		<div class="tab-pane active" id="tabPageUsage">
 			<div id="Usage" class="reviewBlock" data-content="List" style="padding-left:5px;">
 				<div class="callout callout-info">
-					<h3>How Do You Want to Use IceHrm</h3>
+					<h3>How Do You Want to Use HRMS</h3>
 
 					<p style="font-size: 1.2em;">
-						In order to make IceHrm user interface much simpler to use for you and your employees you
-						can select the purpose of using IceHrm for your company. This will disable unwanted modules
+						In order to make HRMS user interface much simpler to use for you and your employees you
+						can select the purpose of using HRMS for your company. This will disable unwanted modules
 						and provide you a better user experience.
 					</p>
 				</div>
@@ -64,7 +64,7 @@ if(empty($groups)){
 								<input id="all" class="module-check" type="checkbox" value="all"/>
 								&nbsp;Use All Available Modules</h4>
 							<p style="font-size: 1.2em;">
-								Use all the Available Modules in IceHrm. This option will enable all the modules
+								Use all the Available Modules in HRMS. This option will enable all the modules
 								including Employee Management, Leave Management, Time Sheets, Attendance, Training,
 								Expenses, Document Management, Travel, Recruitment Management and Payroll
 							</p>
@@ -75,7 +75,7 @@ if(empty($groups)){
 								&nbsp;Leave Management System
 							</h4>
 							<p style="font-size: 1.2em;">
-								Use IceHrm as a Leave / Vacation Management System, Allow Employees to Apply for leave,
+								Use HRMS as a Leave / Vacation Management System, Allow Employees to Apply for leave,
 								Approve leave requests and track leave balances
 							</p>
 						</div>
@@ -85,7 +85,7 @@ if(empty($groups)){
 								&nbsp;Document Management System
 							</h4>
 							<p style="font-size: 1.2em;">
-								Use IceHrm as a Document Management System, Allow Employees upload documents, Automated
+								Use HRMS as a Document Management System, Allow Employees upload documents, Automated
 								notifications for expiring documents, Add company documents and share with specific
 								employees or departments.
 							</p>
@@ -98,7 +98,7 @@ if(empty($groups)){
 								&nbsp;Time Tracking System
 							</h4>
 							<p style="font-size: 1.2em;"><br/>
-								Use IceHrm as an Attendance Management and Time Tracking System. Let employees record
+								Use HRMS as an Attendance Management and Time Tracking System. Let employees record
 								attendance and fill in time sheets.
 							</p>
 						</div>
@@ -108,7 +108,7 @@ if(empty($groups)){
 								&nbsp;Training Management System
 							</h4>
 							<p style="font-size: 1.2em;">
-								Use IceHrm as a Training Management System. Create courses and training sessions. Let
+								Use HRMS as a Training Management System. Create courses and training sessions. Let
 								employees subscribe to training sessions and allow them to submit feedback with training
 								certificates for auditing purposes.
 							</p>
@@ -143,7 +143,7 @@ if(empty($groups)){
 								&nbsp;Salary and Payroll
 							</h4>
 							<p style="font-size: 1.2em;">
-								Process your company payroll using IceHrm and Store employee salary
+								Process your company payroll using HRMS and Store employee salary
 							</p>
 						</div>
 					</div>

@@ -73,7 +73,7 @@ if (class_exists('\\Billing\\Admin\\Api\\BillingActionManager')) {
         <div class="callout callout-danger lead" style="font-size: 14px;">
             <h4>Your Trial Has Expired</h4>
             <p style="font-weight: bold;">
-                Your Icehrm Trial has expired. Please upgrade subscription to continue. If not upgraded your account will be deleted with in few days.
+                Your HRMS Trial has expired. Please upgrade subscription to continue. If not upgraded your account will be deleted with in few days.
                 <br/>
                 <br/>
                 <a href="<?=CLIENT_BASE_URL?>?g=admin&n=billing&m=admin_System" class="btn btn-success btm-xs"><i class="fa fa-checkout"></i> Upgrade Subscription</a>

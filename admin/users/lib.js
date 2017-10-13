@@ -55,7 +55,7 @@ UserAdapter.method('changePassword', function() {
 });
 
 UserAdapter.method('saveUserSuccessCallBack', function(callBackData,serverData) {
-	this.showMessage("Create User","An email has been sent to "+callBackData['email']+" with a temporary password to login to IceHrm.");
+	this.showMessage("Create User","An email has been sent to "+callBackData['email']+" with a temporary password to login to HRMS.");
 	this.get([]);
 });
 

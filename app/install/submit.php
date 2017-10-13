@@ -12,7 +12,7 @@ $ret = array();
 
 if(!$isConfigFileExists || $configData != ""){
 	$ret["status"] = "ERROR";
-	$ret["msg"] = "You are trying to install IceHrm on an existing installation.";
+	$ret["msg"] = "You are trying to install HRMS on an existing installation.";
 	echo json_encode($ret);
 	exit();
 }

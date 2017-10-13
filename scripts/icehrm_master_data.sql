@@ -836,7 +836,7 @@ REPLACE INTO `Reports` (`name`, `details`, `parameters`, `query`, `paramOrder`, 
 INSERT INTO `Settings` (`name`, `value`, `description`, `meta`) VALUES
 ('Company: Logo', '', '','[ "value", {"label":"Logo","type":"fileupload","validation":"none"}]'),
 ('Company: Name', 'Sample Company Pvt Ltd', 'Update your company name - For updating company logo copy a file named logo.png to /app/data/ folder', ''),
-('Company: Description', 'This is a company using icehrm.com', '',''),
+('Company: Description', 'This is a company using hrms.com', '',''),
 ('Email: Enable', '1', '0 will disable all outgoing emails from modules. Value 1 will enable outgoing emails','["value", {"label":"Value","type":"select","source":[["1","Yes"],["0","No"]]}]'),
 ('Email: Mode', 'SMTP', 'SMTP, PHP Mailer or Amazon SES. SMTP = send emails using local or a remote smtp server. PHP Mailer = send emails using mail function provided by php. Amazon SES = send emails trough amazon Simple Email Service.','["value", {"label":"Value","type":"select","source":[["SMTP","SMTP"],["PHP Mailer","PHP Mailer"],["SES","Amazon SES"]]}]'),
 ('Email: SMTP Host', 'localhost', 'SMTP host IP',''),
@@ -846,7 +846,7 @@ INSERT INTO `Settings` (`name`, `value`, `description`, `meta`) VALUES
 ('Email: SMTP Port', 'none', '25',''),
 ('Email: Amazon Access Key ID', '', 'If email mode is Amazon SNS please provide SNS Key',''),
 ('Email: Amazon Secret Access Key', '',  'If email mode is Amazon SNS please provide SNS Secret',''),
-('Email: Email From', 'icehrm@mydomain.com', '',''),
+('Email: Email From', 'hrms@mydomain.com', '',''),
 ('System: Do not pass JSON in request', '0', 'Select Yes if you are having trouble loading data for some tables','["value", {"label":"Value","type":"select","source":[["1","Yes"],["0","No"]]}]'),
 ('System: Reset Modules and Permissions', '0', 'Select this to reset module and permission information in Database (If you have done any changes to meta files)','["value", {"label":"Value","type":"select","source":[["1","Yes"],["0","No"]]}]'),
 ('System: Reset Module Names', '0', 'Select this to reset module names in Database','["value", {"label":"Value","type":"select","source":[["1","Yes"],["0","No"]]}]'),
@@ -940,9 +940,9 @@ INSERT INTO `Certifications` (`id`, `name`, `description`) VALUES
 
 
 INSERT INTO `Clients` (`id`, `name`, `details`, `first_contact_date`, `created`, `address`, `contact_number`, `contact_email`, `company_url`, `status`) VALUES
-  (1, 'IceHrm Sample Client 1', NULL, '2012-01-04', '2013-01-03 05:47:33', '001, Sample Road,\nSample City, USA', '678-894-1047', 'icehrm+client1@web-stalk.com', 'http://icehrm.com', 'Active'),
-  (2, 'IceHrm Sample Client 2', NULL, '2012-01-04', '2013-01-03 05:47:33', '001, Sample Road,\nSample City, USA', '678-894-1047', 'icehrm+client1@web-stalk.com', 'http://icehrm.com', 'Active'),
-  (3, 'IceHrm Sample Client 3', NULL, '2012-01-04', '2013-01-03 05:47:33', '001, Sample Road,\nSample City, USA', '678-894-1047', 'icehrm+client1@web-stalk.com', 'http://icehrm.com', 'Active');
+  (1, 'HRMS Sample Client 1', NULL, '2012-01-04', '2013-01-03 05:47:33', '001, Sample Road,\nSample City, USA', '678-894-1047', 'hrms+client1@web-stalk.com', 'http://hrms.com', 'Active'),
+  (2, 'HRMS Sample Client 2', NULL, '2012-01-04', '2013-01-03 05:47:33', '001, Sample Road,\nSample City, USA', '678-894-1047', 'hrms+client1@web-stalk.com', 'http://hrms.com', 'Active'),
+  (3, 'HRMS Sample Client 3', NULL, '2012-01-04', '2013-01-03 05:47:33', '001, Sample Road,\nSample City, USA', '678-894-1047', 'hrms+client1@web-stalk.com', 'http://hrms.com', 'Active');
 
 
 INSERT INTO `CompanyLoans` (`id`, `name`, `details`) VALUES
@@ -1306,7 +1306,7 @@ INSERT INTO `PayFrequency` VALUES
 
 
 INSERT INTO `Employees` (`id`, `employee_id`, `first_name`, `middle_name`, `last_name`, `nationality`, `birthday`, `gender`, `marital_status`, `ssn_num`, `nic_num`, `other_id`, `driving_license`, `driving_license_exp_date`, `employment_status`, `job_title`, `pay_grade`, `work_station_id`, `address1`, `address2`, `city`, `country`, `province`, `postal_code`, `home_phone`, `mobile_phone`, `work_phone`, `work_email`, `private_email`, `joined_date`, `confirmation_date`, `supervisor`, `department`, `custom1`, `custom2`, `custom3`, `custom4`, `custom5`, `custom6`, `custom7`, `custom8`, `custom9`, `custom10`) VALUES
-  (1, 'EMP001', 'IceHrm', 'Sample', 'Employee', 35, '1984-03-17 18:30:00', 'Male', 'Married', '', '294-38-3535', '294-38-3535', '', NULL, 3, 11, 2, '', '2772 Flynn Street', 'Willoughby', 'Willoughby', 'US', 41, '44094', '440-953-4578', '440-953-4578', '440-953-4578', 'icehrm+admin@web-stalk.com', 'icehrm+admin@web-stalk.com', '2005-08-03 18:00:00', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+  (1, 'EMP001', 'HRMS', 'Sample', 'Employee', 35, '1984-03-17 18:30:00', 'Male', 'Married', '', '294-38-3535', '294-38-3535', '', NULL, 3, 11, 2, '', '2772 Flynn Street', 'Willoughby', 'Willoughby', 'US', 41, '44094', '440-953-4578', '440-953-4578', '440-953-4578', 'hrms+admin@web-stalk.com', 'hrms+admin@web-stalk.com', '2005-08-03 18:00:00', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO `UserRoles` VALUES
   (1,'Report Manager'),
@@ -1314,7 +1314,7 @@ INSERT INTO `UserRoles` VALUES
 
 
 INSERT INTO `Users` VALUES
-(1,'admin','icehrm+admin@web-stalk.com','21232f297a57a5a743894a0e4a801fc3',1,NULL,'Admin','',NULL,NULL,NULL,NULL,NULL);
+(1,'admin','hrms+admin@web-stalk.com','21232f297a57a5a743894a0e4a801fc3',1,NULL,'Admin','',NULL,NULL,NULL,NULL,NULL);
 
 
 INSERT INTO `SalaryComponentType` (`id`,`code`, `name`) VALUES

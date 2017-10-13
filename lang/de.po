@@ -1353,8 +1353,8 @@ msgstr "Abgebrochene Mitarbeiterdaten"
 msgid "Employee Saved Successfully"
 msgstr "Mitarbeiter erfolgreich gespeichert"
 
-msgid "Employee needs a User to login to IceHrm. Do you want to create a user for this employee now?"
-msgstr "Mitarbeiter muss ein Benutzer auf IceHrm anmelden. Wollen Sie nun einen Benutzer für diesen Mitarbeiter zu schaffen?"
+msgid "Employee needs a User to login to HRMS. Do you want to create a user for this employee now?"
+msgstr "Mitarbeiter muss ein Benutzer auf HRMS anmelden. Wollen Sie nun einen Benutzer für diesen Mitarbeiter zu schaffen?"
 
 msgid "You can do this later through Users module if required."
 msgstr "Sie können dieses Modul später durch Benutzer tun, wenn erforderlich."

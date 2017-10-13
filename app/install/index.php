@@ -59,7 +59,7 @@ if(!$isDataFolderExists){
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>IceHRM</title>
+    <title>HRMS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -160,7 +160,7 @@ if(!$isDataFolderExists){
   	</script>
   	
   	<div class="container-fluid bgbody" style="max-width:800px;padding-top:10px;margin:auto">
-  	<h1>IceHRM Installation</h1>
+  	<h1>HRMS Installation</h1>
   	<p class="p1">
   	Please do not install this application if you have already installed (this could break existing installation)
   	</p>
@@ -195,7 +195,7 @@ if(!$isDataFolderExists){
 			<div class="control-group">
 				<label class="control-label" for="LOG">Log file path</label>
 				<div class="controls">
-				  	<input class="input-xxlarge" type="text" id="LOG" name="LOG" value="data/icehrm.log"/>
+				  	<input class="input-xxlarge" type="text" id="LOG" name="LOG" value="data/hrms.log"/>
 				  	<span class="help-inline p1">Keep this empty if you want logs to be in web server's default logs</span>
 				</div>
 			</div>
@@ -203,7 +203,7 @@ if(!$isDataFolderExists){
 				<label class="control-label" for="BASE_URL">App Url</label>
 				<div class="controls">
 				  	<input class="input-xxlarge" type="text" id="BASE_URL" name="BASE_URL" value=""/>
-				  	<span class="help-inline p1">This is the web path to folder that you copy icehrm sources (e.g http://yourdomain.com/icehrm/)</span>
+				  	<span class="help-inline p1">This is the web path to folder that you copy HRMS sources (e.g http://yourdomain.com/icehrm/)</span>
 				</div>
 			</div>
 			<div class="control-group">

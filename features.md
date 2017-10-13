@@ -1,13 +1,13 @@
-Following is a list of features supported in each edition of icehrm
+Following is a list of features supported in each edition of hrms
 -------------------------------------------------------------------
 
-### IceHrm Open Source Edition
+### HRMS Open Source Edition
 
-![Employee Module](https://icehrm.s3.amazonaws.com/images/blog-images/advanced-employee-module.png)
+![Employee Module](https://hrms.s3.amazonaws.com/images/blog-images/advanced-employee-module.png)
 
 #### Employee Management
 
- - Basic [Employee Management](https://icehrm.com) - Store, manage and retrieve employee information when required
+ - Basic [Employee Management](https://hrms.com) - Store, manage and retrieve employee information when required
  - Update all employee information without having to switch employees.
  - Search employee skills, qualifications and other information<br/>easily across whole company.
  - Terminate employees while keeping data in system.
@@ -16,26 +16,26 @@ Following is a list of features supported in each edition of icehrm
 
 #### Other Features
 
- * [Company Information Management](https://icehrm.com) - Store and manage details about how companies, departments and branches of the organisation are connected
- * Time sheets - IceHrm is a [timesheet app](https://icehrm.com) / [Open source timesheet management](https://icehrm.com) application to track time spent by employees on various projects
- * [Attendance Management](https://icehrm.com) - IceHrm can be used as a [attendance management system](https://icehrm.com) effectively for any size a company.
- * [LDAP Login](https://icehrm.com) - Users can share login with company LDAP server
- * [Travel Management](https://icehrm.com) - Module for managing travel requests
+ * [Company Information Management](https://hrms.com) - Store and manage details about how companies, departments and branches of the organisation are connected
+ * Time sheets - HRMS is a [timesheet app](https://hrms.com) / [Open source timesheet management](https://hrms.com) application to track time spent by employees on various projects
+ * [Attendance Management](https://hrms.com) - HRMS can be used as a [attendance management system](https://hrms.com) effectively for any size a company.
+ * [LDAP Login](https://hrms.com) - Users can share login with company LDAP server
+ * [Travel Management](https://hrms.com) - Module for managing travel requests
 
  
-### IceHrm Pro Edition | [IceHrm.com](https://icehrm.com/modules.php)
+### HRMS Pro Edition | [HRMS.com](https://hrms.com/modules.php)
 
-IceHrm Profession version (in short IceHrmPro) is the feature rich commercial alternative for icehrm
-open source version.  IceHrm Pro supports following features
+HRMS Profession version (in short HRMSPro) is the feature rich commercial alternative for hrms
+open source version.  HRMS Pro supports following features
     
 #### Leave Management
 
-IceHrm [Leave management system](https://icehrm.com) is only available in IceHrm Pro or Enterprise versions. IceHrm leave module is a complete [leave management system](https://icehrm.com) for any type of a company
+HRMS [Leave management system](https://hrms.com) is only available in HRMS Pro or Enterprise versions. HRMS leave module is a complete [leave management system](https://hrms.com) for any type of a company
 
-To learn more about leave management in icehrm refer:
-- [Leave Admin Guide](http://blog.icehrm.com/docs/leave-admin)
-- [Configuring Leave Module](http://blog.icehrm.com/docs/leave-setup)
-- [Leave Rules](http://blog.icehrm.com/docs/leave-rules)
+To learn more about leave management in hrms refer:
+- [Leave Admin Guide](http://blog.hrms.com/docs/leave-admin)
+- [Configuring Leave Module](http://blog.hrms.com/docs/leave-setup)
+- [Leave Rules](http://blog.hrms.com/docs/leave-rules)
 
 #### Audit Trial
 
@@ -45,40 +45,40 @@ are using the system.
 
 #### Expense Tracking
 
-[Track Employee Expenses](https://icehrm.com) with expense management module.
+[Track Employee Expenses](https://hrms.com) with expense management module.
 
-You can learn more about [IceHrm Pro here](http://blog.icehrm.com/docs/icehrm-pro/)
+You can learn more about [HRMS Pro here](http://blog.hrms.com/docs/hrms-pro/)
 
-To purchase IceHrmPro please visit [https://icehrm.com/modules.php](https://icehrm.com/modules.php)
+To purchase HRMSPro please visit [https://hrms.com/modules.php](https://hrms.com/modules.php)
 
 #### Training Management
 
-Icehrm [training management system](https://icehrm.com) is for Module for managing courses, training sessions and employee attendance to training sessions.
+Icehrm [training management system](https://hrms.com) is for Module for managing courses, training sessions and employee attendance to training sessions.
  
 
-### IceHrm Enterprise Edition
+### HRMS Enterprise Edition
 
-In addition to pro version features IceHrm enterprise cloud edition includes following features
+In addition to pro version features HRMS enterprise cloud edition includes following features
 
-#### [Employee History Management](https://icehrm.com)
+#### [Employee History Management](https://hrms.com)
 
-#### [Payroll](https://icehrm.com)
+#### [Payroll](https://hrms.com)
 
-IceHrm Enterprise has a full featured payroll module including [PDF salary slip generation](https://icehrm.com)
+HRMS Enterprise has a full featured payroll module including [PDF salary slip generation](https://hrms.com)
 
 #### Candidate / Recruitment Management
 
-Recruitment module can be used as a [applicant tracking system](https://icehrm.com) or a [recruiting software](https://icehrm.com). IceHrm recruitment management system offers
+Recruitment module can be used as a [applicant tracking system](https://hrms.com) or a [recruiting software](https://hrms.com). HRMS recruitment management system offers
 following features
 
-![Recruitment Job Position Sharing](https://icehrm.s3.amazonaws.com/images/blog-images/recruitment-share.png)
+![Recruitment Job Position Sharing](https://hrms.s3.amazonaws.com/images/blog-images/recruitment-share.png)
  
 - Post jobs
 - Let candidates apply for these jobs
 - Schedule interviews
 - Track candidate progress with notes
-- Share job links with linkedIn, facebook, twitter and google+ directly from icehrm
+- Share job links with linkedIn, facebook, twitter and google+ directly from hrms
 
-![Candidate Details](https://icehrm.s3.amazonaws.com/images/blog-images/candidates.png)
+![Candidate Details](https://hrms.s3.amazonaws.com/images/blog-images/candidates.png)
 
-More about [recruitment module](http://blog.icehrm.com/docs/recruitment/)
+More about [recruitment module](http://blog.hrms.com/docs/recruitment/)

@@ -1,5 +1,5 @@
 <?php 
-ini_set('error_log', 'data/icehrm.log');
+ini_set('error_log', 'data/hrms.log');
 
 define('CLIENT_NAME', 'icehrmpro');
 define('APP_BASE_PATH', '/vagrant/build/app/');

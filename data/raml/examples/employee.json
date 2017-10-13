@@ -26,8 +26,8 @@
   "home_phone": "+960112345",
   "mobile_phone": "+960112345",
   "work_phone": "+960112345",
-  "work_email": "icehrm+manager@web-stalk.com",
-  "private_email": "icehrm+manager@web-stalk.com",
+  "work_email": "hrms+manager@web-stalk.com",
+  "private_email": "hrms+manager@web-stalk.com",
   "joined_date": "2011-03-07",
   "confirmation_date": "2012-02-14",
   "supervisor": "1",
@@ -70,6 +70,6 @@
   "department_Name_id": [],
   "department_Name": "Head Office",
   "supervisor_Name_id": [],
-  "supervisor_Name": "IceHrm Employee",
+  "supervisor_Name": "HRMS Employee",
   "image": "http:\/\/app.app.dev\/images\/user_female.png"
 }

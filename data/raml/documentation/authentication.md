@@ -1,2 +1,2 @@
-Admin users of icehrm can find the access token under System->Settings.
-IceHrm uses Bearer Authorization.
+Admin users of HRMS can find the access token under System->Settings.
+HRMS uses Bearer Authorization.

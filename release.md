@@ -9,7 +9,7 @@ Release note v20.1
  * Compatible with MySQL 5.7 Strict Mode
  * PSR-2 compatible code
  * Employee History Module
- * Staff Directory
+ * Staff Directoryc
  
 ### Fixes
   * Fix: password reset not working
@@ -65,9 +65,9 @@ Release note v16.1
 Release note v16.0
 ------------------
 ### Features
- * Advanced Employee Management Module is now included in IceHrm Open Source Edition
- * LDAP Module which was only available in IceHrm Enterprise is now included in open source also
- * Initial implementation of icehrm REST Api for reading employee details
+ * Advanced Employee Management Module is now included in HRMS Open Source Edition
+ * LDAP Module which was only available in HRMS Enterprise is now included in open source also
+ * Initial implementation of hrms REST Api for reading employee details
  * Improvements to data filtering
  * Multiple tabs for settings module
  * Overtime reports - now its possible to calculate overtime for employees.compatible with US overtime rules
@@ -124,7 +124,7 @@ Release note v14.0
 ------------------
 
 ### Features
- * IceHrm is now fully compatible with PHP 7
+ * HRMS is now fully compatible with PHP 7
  * Improvements to travel management module to change the process of applying for travel requests
  * New report add for getting travel requests
  * Improvements to user interface
@@ -212,13 +212,13 @@ Release note v9.0
  * New user interface
  * Decimal leave counts supported
  
-Update icehrm v8.4 to v9.0
+Update hrms v8.4 to v9.0
 --------------------------
 
- * Make a backup of your icehrm db
- * Run db script "icehrmdb_update_v8.4_to_v9.0.sql" which can be found inside script folder of icehrm_v9.0
- * remove all folders except app folder in icehrm root folder
- * copy all folders except app folder from new installation to icehrm root folder
+ * Make a backup of your hrms db
+ * Run db script "hrmsdb_update_v8.4_to_v9.0.sql" which can be found inside script folder of hrms_v9.0
+ * remove all folders except app folder in hrms root folder
+ * copy all folders except app folder from new installation to hrms root folder
  
  
 Release note v8.4
@@ -264,7 +264,7 @@ Release note v8.0
 * Adding new employee time tracking report
 * Join date for employees made mandatory
 * Sending welcome email when a user is added
-* Let users directly reply to admin user from any email sent out from icehrm
+* Let users directly reply to admin user from any email sent out from hrms
 * All the users who are not admins must have an employee object attached
 * Upgrade aws sdk to v2.7.11
 * Allow employees to change password
@@ -348,7 +348,7 @@ Release note v5.1
 
 * Fixes
 * Fixing for non updating null fields
-* https://bitbucket.org/thilina/icehrm-opensource/commits/df57308b53484a2e43ef5c72967ed1cd0dc756cc
+* https://bitbucket.org/thilina/hrms-opensource/commits/df57308b53484a2e43ef5c72967ed1cd0dc756cc
 
 Release note v5.0
 -----------------
@@ -364,8 +364,8 @@ Release note v4.2
 -----------------
 
 ### Fixes
-* https://bitbucket.org/thilina/icehrm-opensource/issue/23/subordinate-leaves-pagination-not-working
-* https://bitbucket.org/thilina/icehrm-opensource/issue/20/error-occured-while-time-punch
+* https://bitbucket.org/thilina/hrms-opensource/issue/23/subordinate-leaves-pagination-not-working
+* https://bitbucket.org/thilina/hrms-opensource/issue/20/error-occured-while-time-punch
 
 
 Release note v4.1
@@ -380,6 +380,6 @@ Release note v4.1
 * Fix errors related to XAMPP and WAMPP servers
 * Fix php warnings and notifications
 * Fix company structure graph issues
-* Allow icehrm client to work without an internet connection
+* Allow hrms client to work without an internet connection
 * Fix installer incorrect base url issue
 * Fix empty user creation issue
