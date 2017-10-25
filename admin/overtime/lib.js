@@ -1,5 +1,5 @@
 /**
- * Author: Thilina Hasantha
+ * Author: 
  */
 
 
@@ -96,4 +96,3 @@ EmployeeOvertimeAdminAdapter.method('getFormFields', function() {
 		["notes", {"label": "Notes", "type": "textarea", "validation": "none"}]
     ];
 });
-

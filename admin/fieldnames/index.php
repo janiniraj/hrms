@@ -1,11 +1,11 @@
 <?php 
 /*
-This file is part of Ice Framework.
+This file is part of HRMS Framework.
 
 ------------------------------------------------------------------
 
-Original work Copyright (c) 2012 [Gamonoid Media Pvt. Ltd]  
-Developer: Thilina Hasantha (thilina.hasantha[at]gmail.com / facebook.com/thilinah)
+  
+
  */
 
 $moduleName = 'fieldnames';

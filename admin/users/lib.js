@@ -1,5 +1,5 @@
 /**
- * Author: Thilina Hasantha
+ * Author: 
  */
 
 function UserAdapter(endPoint) {
