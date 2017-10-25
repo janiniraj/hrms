@@ -18,7 +18,7 @@
 ------------------------------------------------------------------
 
 
-Developer:  (thilina.hasantha[at]gmail.com / facebook.com/thilinah)
+Developer:  (hrms.hasantha[at]gmail.com / facebook.com/thilinah)
  */
 
 namespace Users\Common\Model;

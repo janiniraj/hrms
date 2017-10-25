@@ -18,7 +18,7 @@ along with HRMS Framework. If not, see <http://www.gnu.org/licenses/>.
 ------------------------------------------------------------------
 
 
-Developer:  (thilina.hasantha[at]gmail.com / facebook.com/thilinah)
+Developer:  (hrms.hasantha[at]gmail.com / facebook.com/thilinah)
  */
 namespace Classes;
 

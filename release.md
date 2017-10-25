@@ -2,7 +2,7 @@ Release note v20.2
 ------------------
 ### Fixes
   * Fix for resetting modules
-  
+
 Release note v20.1
 ------------------
 ### Features
@@ -10,12 +10,12 @@ Release note v20.1
  * PSR-2 compatible code
  * Employee History Module
  * Staff Directoryc
- 
+
 ### Fixes
   * Fix: password reset not working
   * Fix: limiting selectable countries via Settings
   * Fix for resetting modules
-  
+
 Release note v20.0
 ------------------
 ### Features
@@ -23,7 +23,7 @@ Release note v20.0
  * Compatible with MySQL 5.7 Strict Mode
  * Namespaced Classes
  * LDAP Module
- 
+
 ### Fixes
   * Fix: limiting selectable countries via Settings
 
@@ -57,7 +57,7 @@ Release note v18.0
 
 Release note v16.1
 ------------------
- 
+
 ### Fixes
  * Fix LDAP user login issue
  * Allow creating users with username having dot and dash
@@ -73,7 +73,7 @@ Release note v16.0
  * Overtime reports - now its possible to calculate overtime for employees.compatible with US overtime rules
  * Logout the user if tried accessing an unauthorized module
  * Setting for updating module names
- 
+
 ### Fixes
  * Fix issue: classes should be loaded even the module is disabled
  * Deleting the only Admin user is not allowed
@@ -86,7 +86,7 @@ Release note v15.2
 ### Features
  * Overtime Reports
  * Overtime calculation for california
- 
+
 ### Fixes
  * Fix issue: uncaught error when placeholder value is empty
  * Log email sending success status
@@ -104,7 +104,7 @@ Release note v15.0
  * Adding a new field to show total time of each time sheet
  * New report added for listing Employee Time Sheets
  * Company logo uploaded via settings will be used for all email headers
- 
+
 ### Fixes
  * Fix issue: default module URL is incorrect for Employees
  * Fix date parsing issue in time sheets
@@ -133,7 +133,7 @@ Release note v14.0
  * Improvements to admin/manager and user dashboard
  * Managers allowed to view/add/edit employee documents
  * New reports added for employee expenses and travel
- 
+
 ### Fixes
  * Fix unavailable help links
 
@@ -142,7 +142,7 @@ Release note v13.4
 -----------------
 
 ### Features
- 
+
 ### Fixes
  * Fix employee leave report leave type field
 
@@ -152,9 +152,9 @@ Release note v13.0
 ### Features
  * Recruitment module
  * Allow managers to edit attendance of direct report employees
- 
+
 ### Fixes
- * Employee switching issue fixed 
+ * Employee switching issue fixed
  * Fix terminated employee labels
  * Fix issue with punch-in
 
@@ -164,9 +164,9 @@ Release note v12.6
 ### Features
  * Charts module
  * Code level security improvements
- 
+
 ### Fixes
- * Employee switching issue fixed 
+ * Employee switching issue fixed
 
 
 Release note v11.1
@@ -185,14 +185,14 @@ Release note v11.0
  * Adding view employee feature
 
 ### Fixes
- * Improvements to date time pickers 
+ * Improvements to date time pickers
 
 
 Release note v10.1
 -----------------
 
 ### Features
- * Integration with ice-framework (http://githun.com/thilinah/ice-framework)
+ * Integration with hrms-framework (http://githun.com/thilinah/hrms-framework)
  * Option for only allow users to add an entry to a timesheet only if they have marked atteandance for the selected period
  * Restricting availability of leave types to employees using leave groups
  * Admins and add notes to employees
@@ -211,7 +211,7 @@ Release note v9.0
 ### Features
  * New user interface
  * Decimal leave counts supported
- 
+
 Update hrms v8.4 to v9.0
 --------------------------
 
@@ -219,8 +219,8 @@ Update hrms v8.4 to v9.0
  * Run db script "hrmsdb_update_v8.4_to_v9.0.sql" which can be found inside script folder of hrms_v9.0
  * remove all folders except app folder in hrms root folder
  * copy all folders except app folder from new installation to hrms root folder
- 
- 
+
+
 Release note v8.4
 -----------------
 
@@ -348,7 +348,7 @@ Release note v5.1
 
 * Fixes
 * Fixing for non updating null fields
-* https://bitbucket.org/thilina/hrms-opensource/commits/df57308b53484a2e43ef5c72967ed1cd0dc756cc
+* https://bitbucket.org/hrms/hrms-opensource/commits/df57308b53484a2e43ef5c72967ed1cd0dc756cc
 
 Release note v5.0
 -----------------
@@ -364,8 +364,8 @@ Release note v4.2
 -----------------
 
 ### Fixes
-* https://bitbucket.org/thilina/hrms-opensource/issue/23/subordinate-leaves-pagination-not-working
-* https://bitbucket.org/thilina/hrms-opensource/issue/20/error-occured-while-time-punch
+* https://bitbucket.org/hrms/hrms-opensource/issue/23/subordinate-leaves-pagination-not-working
+* https://bitbucket.org/hrms/hrms-opensource/issue/20/error-occured-while-time-punch
 
 
 Release note v4.1
