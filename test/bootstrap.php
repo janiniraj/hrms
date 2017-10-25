@@ -15,9 +15,9 @@ exec($createDBCommand);
 
 //Run create table script
 $scripts = array(
-    APP_BASE_PATH."scripts/icehrmdb.sql",
-    APP_BASE_PATH."scripts/icehrm_master_data.sql",
-    //APP_BASE_PATH."scripts/icehrm_sample_data.sql",
+    APP_BASE_PATH."scripts/hrmsdb.sql",
+    APP_BASE_PATH."scripts/hrms_master_data.sql",
+    //APP_BASE_PATH."scripts/hrms_sample_data.sql",
 );
 
 foreach ($scripts as $insql) {

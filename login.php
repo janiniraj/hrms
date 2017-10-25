@@ -7,13 +7,13 @@ include("server.includes.inc.php");
 error_log(print_r($_REQUEST, true));
 
 if (empty($user)) {
-	if (!isset($_REQUEST['f']) && isset($_COOKIE['icehrmLF'])
+	if (!isset($_REQUEST['f']) && isset($_COOKIE['hrmsLF'])
 		&& $_REQUEST['login'] != 'no' && !isset($_REQUEST['username'])) {
 		$tempUser = new \Users\Common\Model\User();
-		$tempUser->Load("login_hash = ?", array($_COOKIE['icehrmLF']));
+		$tempUser->Load("login_hash = ?", array($_COOKIE['hrmsLF']));
 
 		if (!empty($tempUser->id) &&
-			sha1($tempUser->email."_".$tempUser->password) == $_COOKIE['icehrmLF']) {
+			sha1($tempUser->email."_".$tempUser->password) == $_COOKIE['hrmsLF']) {
 			$_REQUEST['username'] = $tempUser->username;
 			$_REQUEST['password'] = $tempUser->password;
 			$_REQUEST['hashedPwd'] = $tempUser->password;
@@ -54,13 +54,13 @@ if (empty($user)) {
 				$suser->login_hash = sha1($suser->email."_".$suser->password);
 				$suser->Save();
 
-				setcookie('icehrmLF', $suser->login_hash, strtotime('+30 days'));
+				setcookie('hrmsLF', $suser->login_hash, strtotime('+30 days'));
 			} else if (!isset($_REQUEST['remember'])) {
-				setcookie('icehrmLF', '');
+				setcookie('hrmsLF', '');
 			}
 
 			if (!isset($_REQUEST['remember'])) {
-				setcookie('icehrmLF');
+				setcookie('hrmsLF');
 			}
 
 			$redirectUrl = \Utils\SessionUtils::getSessionObject('loginRedirect');
@@ -120,7 +120,7 @@ $logoFileUrl = \Classes\UIManager::getInstance()->getCompanyLogoUrl();
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><?=APP_NAME?> Login</title>
+    <title>HRMS Login</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->

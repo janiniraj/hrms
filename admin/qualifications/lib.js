@@ -40,7 +40,7 @@ SkillAdapter.method('getFormFields', function() {
 });
 
 SkillAdapter.method('getHelpLink', function () {
-	return 'http://blog.icehrm.com/docs/qualifications/';
+	return 'http://blog.hrms.com/docs/qualifications/';
 });
 
 

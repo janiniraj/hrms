@@ -1,9 +1,9 @@
 {
-  "name": "IceHrm",
+  "name": "HRMS",
   "authors": [
-    "team@icehrm.com"
+    "team@hrms.com"
   ],
-  "description": "IceHrm",
+  "description": "HRMS",
   "main": "",
   "license": "GPLv3",
   "homepage": "",

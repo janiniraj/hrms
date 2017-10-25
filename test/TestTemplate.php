@@ -37,14 +37,14 @@ class TestTemplate extends PHPUnit_Framework_TestCase
 
         $user = new \Users\Common\Model\User();
         $user->username = 'manager';
-        $user->email = 'manager@icehrm-test.com';
+        $user->email = 'manager@hrms-test.com';
         $user->password = '21232f297a57a5a743894a0e4a801fc3';
         $user->user_level = 'Manager';
         $user->Save();
 
         $user = new \Users\Common\Model\User();
         $user->username = 'profile';
-        $user->email = 'profile@icehrm-test.com';
+        $user->email = 'profile@hrms-test.com';
         $user->password = '21232f297a57a5a743894a0e4a801fc3';
         $user->user_level = 'Profile';
         $user->Save();
@@ -97,8 +97,8 @@ class TestTemplate extends PHPUnit_Framework_TestCase
         exec($createDBCommand);
 
         $scripts = array(
-            APP_BASE_PATH."scripts/icehrmdb.sql",
-            APP_BASE_PATH."scripts/icehrm_master_data.sql"
+            APP_BASE_PATH."scripts/hrmsdb.sql",
+            APP_BASE_PATH."scripts/hrms_master_data.sql"
         );
 
         foreach ($scripts as $insql) {

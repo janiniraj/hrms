@@ -259,7 +259,7 @@ EmployeeAdapter.method('getActionButtonsHtml', function(id) {
 });
 
 EmployeeAdapter.method('getHelpLink', function () {
-    return 'http://blog.icehrm.com/docs/employees/';
+    return 'http://blog.hrms.com/docs/employees/';
 });
 
 EmployeeAdapter.method('saveSuccessItemCallback', function(data) {

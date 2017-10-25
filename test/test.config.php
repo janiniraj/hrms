@@ -1,11 +1,11 @@
 <?php
-ini_set('error_log', '/tmp/icehrm.test.log');
+ini_set('error_log', '/tmp/hrms.test.log');
 
 define('TEST_BASE_PATH', dirname(__FILE__).'/');
 
-define('APP_NAME', 'IceHrm');
-define('FB_URL', 'IceHrm');
-define('TWITTER_URL', 'IceHrm');
+define('APP_NAME', 'HRMS');
+define('FB_URL', 'HRMS');
+define('TWITTER_URL', 'HRMS');
 
 define('SIGN_IN_ELEMENT_MAPPING_FIELD_NAME', 'employee');
 
@@ -21,8 +21,8 @@ if (!defined('MYSQL_ROOT_USER') || !defined('MYSQL_ROOT_PASS')) {
     //Tests running on deploy
     define('APP_BASE_PATH', realpath(dirname(__FILE__).'/../app')."/");
     define('CLIENT_BASE_PATH', APP_BASE_PATH.'');
-    define('BASE_URL', 'http://apps.gamonoid.com/icehrmcore/');
-    define('CLIENT_BASE_URL', 'http://apps.gamonoid.com/icehrm/');
+    define('BASE_URL', 'http://apps.gamonoid.com/hrmscore/');
+    define('CLIENT_BASE_URL', 'http://apps.gamonoid.com/hrms/');
 }
 
 if (!defined('MYSQL_ROOT_USER') || !defined('MYSQL_ROOT_PASS')) {
@@ -30,7 +30,7 @@ if (!defined('MYSQL_ROOT_USER') || !defined('MYSQL_ROOT_PASS')) {
     define('APP_USERNAME', 'root');
     define('APP_PASSWORD', 'dev');
 } else {
-    define('APP_DB', 'icehrmht');
+    define('APP_DB', 'hrmsht');
     define('APP_USERNAME', MYSQL_ROOT_USER);
     define('APP_PASSWORD', MYSQL_ROOT_PASS);
 }

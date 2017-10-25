@@ -45,7 +45,7 @@ abstract class EmailSender
                 $emailBody = str_replace("#_url_#", CLIENT_BASE_URL."?".$action->url, $emailBody);
             }
             $this->sendEmail(
-                'IceHrm Notification from '.$notification->type,
+                'HRMS Notification from '.$notification->type,
                 $user->email,
                 $emailBody,
                 array(),

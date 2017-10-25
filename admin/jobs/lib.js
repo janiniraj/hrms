@@ -42,7 +42,7 @@ JobTitleAdapter.method('getFormFields', function() {
 });
 
 JobTitleAdapter.method('getHelpLink', function () {
-	return 'http://blog.icehrm.com/docs/jobdetails/';
+	return 'http://blog.hrms.com/docs/jobdetails/';
 });
 
 

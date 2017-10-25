@@ -203,20 +203,20 @@ if(!$isDataFolderExists){
 				<label class="control-label" for="BASE_URL">App Url</label>
 				<div class="controls">
 				  	<input class="input-xxlarge" type="text" id="BASE_URL" name="BASE_URL" value=""/>
-				  	<span class="help-inline p1">This is the web path to folder that you copy HRMS sources (e.g http://yourdomain.com/icehrm/)</span>
+				  	<span class="help-inline p1">This is the web path to folder that you copy HRMS sources (e.g http://yourdomain.com/hrms/)</span>
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label" for="APP_DB">MySql Database Name</label>
 				<div class="controls">
-				  	<input class="input-xxlarge" type="text" id="APP_DB" name="APP_DB" value="icehrmdb"/>
+				  	<input class="input-xxlarge" type="text" id="APP_DB" name="APP_DB" value="hrmsdb"/>
 				  	<span class="help-inline p1">Application DB Name</span>
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label" for="APP_USERNAME">Database User</label>
 				<div class="controls">
-				  	<input class="input-xxlarge" type="text" id="APP_USERNAME" name="APP_USERNAME" value="icehrmuser"/>
+				  	<input class="input-xxlarge" type="text" id="APP_USERNAME" name="APP_USERNAME" value="hrmsuser"/>
 				  	<span class="help-inline p1">Database username</span>
 				</div>
 			</div>

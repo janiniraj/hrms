@@ -217,7 +217,7 @@ include('configureUIManager.php');
     left: 0;
     z-index: 9999;
     background: rgba(0, 0, 0, 0);
-    background-image: url('<?=BASE_URL?>images/icehrm-loader.gif');
+    background-image: url('<?=BASE_URL?>images/hrms-loader.gif');
     background-repeat: no-repeat;
     background-position: center;display:none;"></div>
     <!-- Left side column. contains the logo and sidebar -->

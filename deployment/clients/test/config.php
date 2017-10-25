@@ -1,7 +1,7 @@
 <?php 
 ini_set('error_log', 'data/hrms.log');
 
-define('CLIENT_NAME', 'icehrmpro');
+define('CLIENT_NAME', 'hrmspro');
 define('APP_BASE_PATH', '/vagrant/build/app/');
 define('CLIENT_BASE_PATH', '/vagrant/deployment/clients/test/');
 define('BASE_URL','http://app.app.dev/');

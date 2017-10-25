@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="icehrm-opensource" default="build">
+<project name="hrms-opensource" default="build">
  <!-- By default, we assume all tools to be on the $PATH -->
  <property name="toolsdir" value="${basedir}/tools/"/>
  <property name="destination" value="${basedir}/build/app"/>
  <property name="testdir" value="${basedir}/build/test"/>
  <property name="origin" value="${basedir}"/>
  <property environment="env"/>
- <property name="env.appname" value="icehrm"/>
+ <property name="env.appname" value="hrms"/>
  <property name="env.Version" value="dev"/>
- <property name="installpath" value="/var/www/apps.gamonoid.com/icehrm-open-core"/>
+ <property name="installpath" value="/var/www/apps.gamonoid.com/hrms-open-core"/>
 
 <target name="build-ci"
         depends="prepare,lint,phpcs,copyapp,phpunit"

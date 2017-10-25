@@ -33,7 +33,7 @@ this.origFilter = null;
 this.orderBy = null;
 this.currentElement = null;
 
-AdapterBase.inherits(IceHRMBase);
+AdapterBase.inherits(Hrmsbase);
 
 AdapterBase.method('initAdapter' , function(endPoint,tab,filter,orderBy) {
 	this.moduleRelativeURL = baseUrl;

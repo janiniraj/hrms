@@ -107,5 +107,5 @@ SettingAdapter.method('loadRemoteDataForSettings', function () {
 
 
 SettingAdapter.method('getHelpLink', function () {
-	return 'http://blog.icehrm.com/docs/settings/';
+	return 'http://blog.hrms.com/docs/settings/';
 });

@@ -264,7 +264,7 @@ if($action == 'get'){
 			$ret['status'] = "SUCCESS";
 		}else{
 			$ret['status'] = "ERROR";
-			$ret['message'] = "Error Verifying IceHrm Instance due to invalid key. If you are keep getting this, please contact us through ".CONTACT_EMAIL;
+			$ret['message'] = "Error Verifying HRMS Instance due to invalid key. If you are keep getting this, please contact us through ".CONTACT_EMAIL;
 		}
 	}
 

@@ -302,7 +302,7 @@ CompanyGraphAdapter.method('fixCyclicParent', function(sourceData) {
 });
 
 CompanyGraphAdapter.method('getHelpLink', function () {
-	return 'http://blog.icehrm.com/docs/companystructure/';
+	return 'http://blog.hrms.com/docs/companystructure/';
 });
 
 

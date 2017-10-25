@@ -26,7 +26,7 @@ along with HRMS Framework. If not, see <http://www.gnu.org/licenses/>.
  * The base class for providing core functions to all module classes.
  * @class Base.js
  */
-function IceHRMBase() {
+function Hrmsbase() {
 	this.deleteParams = {};
 	this.createRemoteTable = false;
 	this.instanceId = "None";
@@ -61,7 +61,7 @@ this.permissions = {};
 
 this.baseUrl = null;
 
-IceHRMBase.method('init' , function(appName, currentView, dataUrl, permissions) {
+Hrmsbase.method('init' , function(appName, currentView, dataUrl, permissions) {
 
 });
 
@@ -70,16 +70,16 @@ IceHRMBase.method('init' , function(appName, currentView, dataUrl, permissions) 
  * @method setNoJSONRequests
  * @param val {Boolean}
  */
-IceHRMBase.method('setNoJSONRequests' , function(val) {
+Hrmsbase.method('setNoJSONRequests' , function(val) {
 	this.noJSONRequests = val;
 });
 
 
-IceHRMBase.method('setPermissions' , function(permissions) {
+Hrmsbase.method('setPermissions' , function(permissions) {
 	this.permissions = permissions;
 });
 
-IceHRMBase.method('sortingStarted' , function(val) {
+Hrmsbase.method('sortingStarted' , function(val) {
 	this.sorting = val;
 });
 
@@ -90,7 +90,7 @@ IceHRMBase.method('sortingStarted' , function(val) {
  * @example
  * 	this.checkPermission("Upload/Delete Profile Image")
  */
-IceHRMBase.method('checkPermission' , function(permission) {
+Hrmsbase.method('checkPermission' , function(permission) {
 	if(this.permissions[permission] == undefined || this.permissions[permission] == null || this.permissions[permission] == "Yes"){
 		return "Yes";
 	}else{
@@ -98,42 +98,42 @@ IceHRMBase.method('checkPermission' , function(permission) {
 	}
 });
 
-IceHRMBase.method('setBaseUrl' , function(url) {
+Hrmsbase.method('setBaseUrl' , function(url) {
 	this.baseUrl = url;
 });
 
-IceHRMBase.method('setUser' , function(user) {
+Hrmsbase.method('setUser' , function(user) {
 	this.user = user;
 });
 
-IceHRMBase.method('getUser' , function() {
+Hrmsbase.method('getUser' , function() {
 	return this.user;
 });
 
-IceHRMBase.method('setInstanceId' , function(id) {
+Hrmsbase.method('setInstanceId' , function(id) {
 	this.instanceId = id;
 });
 
-IceHRMBase.method('setGoogleAnalytics' , function(ga) {
+Hrmsbase.method('setGoogleAnalytics' , function(ga) {
 	this.ga = ga;
 });
 
-IceHRMBase.method('scrollToTop' , function() {
+Hrmsbase.method('scrollToTop' , function() {
 	$("html, body").animate({ scrollTop: 0 }, "fast");
 });
 
-IceHRMBase.method('scrollToBottom' , function() {
+Hrmsbase.method('scrollToBottom' , function() {
 	$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 });
 
-IceHRMBase.method('scrollToElement' , function(element) {
+Hrmsbase.method('scrollToElement' , function(element) {
 	if($(window).height() <= element.offset().top){
 		$("html, body").animate({ scrollTop: element.offset().top }, "slow");
 	}
 
 });
 
-IceHRMBase.method('scrollToElementBottom' , function(element) {
+Hrmsbase.method('scrollToElementBottom' , function(element) {
 	if($(window).height() <= element.offset().top + element.height()){
 		$("html, body").animate({ scrollTop: element.offset().top + element.height() }, "slow");
 	}
@@ -141,18 +141,18 @@ IceHRMBase.method('scrollToElementBottom' , function(element) {
 });
 
 
-IceHRMBase.method('setTranslations' , function(txt) {
+Hrmsbase.method('setTranslations' , function(txt) {
 	this.translations = txt['messages'][''];
 });
 
-IceHRMBase.method('gt' , function(key) {
+Hrmsbase.method('gt' , function(key) {
 	if(this.translations[key] == undefined){
 		return key;
 	}
 	return this.translations[key][0];
 });
 
-IceHRMBase.method('addToLangTerms' , function(key) {
+Hrmsbase.method('addToLangTerms' , function(key) {
 	var termsArr;
 	var terms = localStorage.getItem("terms");
 	if(terms == undefined){
@@ -182,11 +182,11 @@ IceHRMBase.method('addToLangTerms' , function(key) {
  *  	return false;
  *	});
  */
-IceHRMBase.method('showActionButtons' , function() {
+Hrmsbase.method('showActionButtons' , function() {
 	return true;
 });
 
-IceHRMBase.method('trackEvent' , function(action, label, value) {
+Hrmsbase.method('trackEvent' , function(action, label, value) {
 	try{
 		if(label == undefined || label == null){
 			this.ga.push(['_trackEvent', this.instanceId, action]);
@@ -203,7 +203,7 @@ IceHRMBase.method('trackEvent' , function(action, label, value) {
 });
 
 
-IceHRMBase.method('setCurrentProfile' , function(currentProfile) {
+Hrmsbase.method('setCurrentProfile' , function(currentProfile) {
 	this.currentProfile = currentProfile;
 });
 
@@ -213,7 +213,7 @@ IceHRMBase.method('setCurrentProfile' , function(currentProfile) {
  * @returns Profile of the current user if the profile is not switched if not switched profile
  */
 
-IceHRMBase.method('getCurrentProfile' , function() {
+Hrmsbase.method('getCurrentProfile' , function() {
 	return this.currentProfile;
 });
 
@@ -232,7 +232,7 @@ IceHRMBase.method('getCurrentProfile' , function() {
  *		this.initFieldMasterData(cb);
  *      });
  */
-IceHRMBase.method('initFieldMasterData' , function(callback, loadAllCallback, loadAllCallbackData) {
+Hrmsbase.method('initFieldMasterData' , function(callback, loadAllCallback, loadAllCallbackData) {
 	var values;
 	if(this.showAddNew == undefined || this.showAddNew == null){
 		this.showAddNew = true;
@@ -310,7 +310,7 @@ IceHRMBase.method('initFieldMasterData' , function(callback, loadAllCallback, lo
  *	modJs.subModJsList['tabCandidateApplication'].setShowFormOnPopup(true);
  */
 
-IceHRMBase.method('setShowFormOnPopup' , function(val) {
+Hrmsbase.method('setShowFormOnPopup' , function(val) {
 	this.showFormOnPopup = val;
 });
 
@@ -323,19 +323,19 @@ IceHRMBase.method('setShowFormOnPopup' , function(val) {
  *	modJs.subModJsList['tabCandidateApplication'].setRemoteTable(true);
  */
 
-IceHRMBase.method('setRemoteTable' , function(val) {
+Hrmsbase.method('setRemoteTable' , function(val) {
 	this.createRemoteTable = val;
 });
 
-IceHRMBase.method('setSettings' , function(val) {
+Hrmsbase.method('setSettings' , function(val) {
 	this.settings = val;
 });
 
-IceHRMBase.method('getRemoteTable' , function() {
+Hrmsbase.method('getRemoteTable' , function() {
 	return this.createRemoteTable;
 });
 
-IceHRMBase.method('isAllLoaded' , function(fieldMasterDataKeys) {
+Hrmsbase.method('isAllLoaded' , function(fieldMasterDataKeys) {
 
 	for(key in fieldMasterDataKeys){
 		if(fieldMasterDataKeys[key] == false){
@@ -345,7 +345,7 @@ IceHRMBase.method('isAllLoaded' , function(fieldMasterDataKeys) {
 	return true;
 });
 
-IceHRMBase.method('initFieldMasterDataResponse' , function(key,data, callback, loadAllCallbackData) {
+Hrmsbase.method('initFieldMasterDataResponse' , function(key,data, callback, loadAllCallbackData) {
 	this.fieldMasterData[key] = data;
 	this.fieldMasterDataKeys[key] = true;
 
@@ -364,7 +364,7 @@ IceHRMBase.method('initFieldMasterDataResponse' , function(key,data, callback, l
 
 });
 
-IceHRMBase.method('getMetaFieldValues' , function(key, fields) {
+Hrmsbase.method('getMetaFieldValues' , function(key, fields) {
 	for(var i=0;i<fields.length;i++){
 		if(key == fields[i][0]){
 			return fields[i][1];
@@ -373,7 +373,7 @@ IceHRMBase.method('getMetaFieldValues' , function(key, fields) {
 	return null;
 });
 
-IceHRMBase.method('getThemeColors' , function() {
+Hrmsbase.method('getThemeColors' , function() {
 
 
 	var colors = ["red","yellow","aqua","blue",
@@ -384,13 +384,13 @@ IceHRMBase.method('getThemeColors' , function() {
 
 });
 
-IceHRMBase.method('getColorByRandomString' , function(string) {
+Hrmsbase.method('getColorByRandomString' , function(string) {
 	var colors = this.getThemeColors();
 	var k = string.charCodeAt(0);
 	return colors[k % colors.length];
 });
 
-IceHRMBase.method('getColorByFileType' , function(type) {
+Hrmsbase.method('getColorByFileType' , function(type) {
 	type = type.toLowerCase();
 
 	var colorMap = {};
@@ -418,7 +418,7 @@ IceHRMBase.method('getColorByFileType' , function(type) {
 
 });
 
-IceHRMBase.method('getIconByFileType' , function(type) {
+Hrmsbase.method('getIconByFileType' , function(type) {
 	type = type.toLowerCase();
 
 	var iconMap = {};
@@ -447,30 +447,30 @@ IceHRMBase.method('getIconByFileType' , function(type) {
 
 });
 
-IceHRMBase.method('getSourceMapping' , function() {
+Hrmsbase.method('getSourceMapping' , function() {
 	return this.sourceMapping ;
 });
 
-IceHRMBase.method('setTesting' , function(testing) {
+Hrmsbase.method('setTesting' , function(testing) {
 	this.testing = testing;
 });
 
-IceHRMBase.method('consoleLog' , function(message) {
+Hrmsbase.method('consoleLog' , function(message) {
 	if(this.testing) {
 		console.log(message);
 	}
 });
 
-IceHRMBase.method('setClientMessages', function(msgList) {
+Hrmsbase.method('setClientMessages', function(msgList) {
 	this.msgList = msgList;
 });
 
-IceHRMBase.method('setTemplates', function(templates) {
+Hrmsbase.method('setTemplates', function(templates) {
 	this.templates = templates;
 });
 
 
-IceHRMBase.method('getWSProperty', function(array, key) {
+Hrmsbase.method('getWSProperty', function(array, key) {
 	if(array.hasOwnProperty(key)) {
 		return array[key];
 	}
@@ -478,22 +478,22 @@ IceHRMBase.method('getWSProperty', function(array, key) {
 });
 
 
-IceHRMBase.method('getClientMessage', function(key) {
+Hrmsbase.method('getClientMessage', function(key) {
 	return this.getWSProperty(this.msgList,key);
 });
 
 
 
-IceHRMBase.method('getTemplate', function(key) {
+Hrmsbase.method('getTemplate', function(key) {
 	return this.getWSProperty(this.templates, key);
 });
 
-IceHRMBase.method('setGoogleAnalytics', function (gaq) {
+Hrmsbase.method('setGoogleAnalytics', function (gaq) {
 	this.gaq = gaq;
 });
 
 
-IceHRMBase.method('showView', function(view) {
+Hrmsbase.method('showView', function(view) {
 	if(this.currentView != null) {
 		this.previousView = this.currentView;
 		$("#" + this.currentView).hide();
@@ -503,17 +503,17 @@ IceHRMBase.method('showView', function(view) {
 	this.moveToTop();
 });
 
-IceHRMBase.method('showPreviousView', function() {
+Hrmsbase.method('showPreviousView', function() {
 	this.showView(this.previousView);
 });
 
 
-IceHRMBase.method('moveToTop', function () {
+Hrmsbase.method('moveToTop', function () {
 
 });
 
 
-IceHRMBase.method('callFunction', function (callback, cbParams,thisParam) {
+Hrmsbase.method('callFunction', function (callback, cbParams,thisParam) {
 	if($.isFunction(callback)) {
 		try{
 			if(thisParam == undefined || thisParam == null){
@@ -536,7 +536,7 @@ IceHRMBase.method('callFunction', function (callback, cbParams,thisParam) {
 	return ;
 });
 
-IceHRMBase.method('getTableTopButtonHtml', function() {
+Hrmsbase.method('getTableTopButtonHtml', function() {
 	var html = "";
 	if(this.getShowAddNew()){
 		html = '<button onclick="modJs.renderForm();return false;" class="btn btn-small btn-primary">'+this.gt(this.getAddNewLabel())+' <i class="fa fa-plus"></i></button>';
@@ -572,15 +572,15 @@ IceHRMBase.method('getTableTopButtonHtml', function() {
 });
 
 
-IceHRMBase.method('getActionButtonHeader', function() {
+Hrmsbase.method('getActionButtonHeader', function() {
     return { "sTitle": "", "sClass": "center" };
 });
 
-IceHRMBase.method('getTableHTMLTemplate', function() {
+Hrmsbase.method('getTableHTMLTemplate', function() {
     return '<div class="box-body table-responsive"><table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped" id="grid"></table></div>';
 });
 
-IceHRMBase.method('isSortable', function() {
+Hrmsbase.method('isSortable', function() {
     return true;
 });
 
@@ -590,7 +590,7 @@ IceHRMBase.method('isSortable', function() {
  * @param val {Boolean}
  */
 
-IceHRMBase.method('createTable', function(elementId) {
+Hrmsbase.method('createTable', function(elementId) {
 
 
     var that = this;
@@ -673,7 +673,7 @@ IceHRMBase.method('createTable', function(elementId) {
  * @param val {Boolean}
  */
 
-IceHRMBase.method('createTableServer', function(elementId) {
+Hrmsbase.method('createTableServer', function(elementId) {
 	var that = this;
 	var headers = this.getHeaders();
 
@@ -758,7 +758,7 @@ IceHRMBase.method('createTableServer', function(elementId) {
 		];
 		});
  */
-IceHRMBase.method('getHeaders', function() {
+Hrmsbase.method('getHeaders', function() {
 
 });
 
@@ -777,7 +777,7 @@ IceHRMBase.method('getHeaders', function() {
 	});
  */
 
-IceHRMBase.method('getDataMapping', function() {
+Hrmsbase.method('getDataMapping', function() {
 
 });
 
@@ -792,11 +792,11 @@ IceHRMBase.method('getDataMapping', function() {
 	];
 	});
  */
-IceHRMBase.method('getFormFields', function() {
+Hrmsbase.method('getFormFields', function() {
 
 });
 
-IceHRMBase.method('getTableData', function() {
+Hrmsbase.method('getTableData', function() {
 
 });
 
@@ -812,7 +812,7 @@ IceHRMBase.method('getTableData', function() {
 		];
 	});
  */
-IceHRMBase.method('getFilters', function() {
+Hrmsbase.method('getFilters', function() {
 	return null;
 });
 
@@ -821,16 +821,16 @@ IceHRMBase.method('getFilters', function() {
  * @method edit
  * @param id {int} id of the item to edit
  */
-IceHRMBase.method('edit', function(id) {
+Hrmsbase.method('edit', function(id) {
 	this.currentId = id;
 	this.getElement(id,[]);
 });
 
-IceHRMBase.method('copyRow', function(id) {
+Hrmsbase.method('copyRow', function(id) {
 	this.getElement(id,[],true);
 });
 
-IceHRMBase.method('renderModel', function(id,header,body) {
+Hrmsbase.method('renderModel', function(id,header,body) {
 	$('#'+id+'ModelBody').html("");
 
 	if(body == undefined || body == null){
@@ -842,7 +842,7 @@ IceHRMBase.method('renderModel', function(id,header,body) {
 });
 
 
-IceHRMBase.method('renderYesNoModel', function(header,body,yesBtnName,noBtnName,callback, callbackParams) {
+Hrmsbase.method('renderYesNoModel', function(header,body,yesBtnName,noBtnName,callback, callbackParams) {
     var that = this;
     var modelId = "#yesnoModel";
 
@@ -873,7 +873,7 @@ IceHRMBase.method('renderYesNoModel', function(header,body,yesBtnName,noBtnName,
 
 });
 
-IceHRMBase.method('renderModelFromDom', function(id,header,element) {
+Hrmsbase.method('renderModelFromDom', function(id,header,element) {
 	$('#'+id+'ModelBody').html("");
 
 	if(element == undefined || element == null){
@@ -891,7 +891,7 @@ IceHRMBase.method('renderModelFromDom', function(id,header,element) {
  * @param id {int} id of the item to edit
  */
 
-IceHRMBase.method('deleteRow', function(id) {
+Hrmsbase.method('deleteRow', function(id) {
 	this.deleteParams['id'] = id;
 	this.renderModel('delete',"Confirm Deletion","Are you sure you want to delete this item ?");
 	$('#deleteModel').modal('show');
@@ -909,7 +909,7 @@ IceHRMBase.method('deleteRow', function(id) {
  * @example
  * 	this.showMessage("Error Occured while Applying Leave", callBackData);
  */
-IceHRMBase.method('showMessage', function(title,message,closeCallback,closeCallbackData, isPlain) {
+Hrmsbase.method('showMessage', function(title,message,closeCallback,closeCallbackData, isPlain) {
 	var that = this;
 	var modelId = "";
 	if(isPlain){
@@ -932,7 +932,7 @@ IceHRMBase.method('showMessage', function(title,message,closeCallback,closeCallb
 	});
 });
 
-IceHRMBase.method('showDomElement', function(title,element,closeCallback,closeCallbackData, isPlain) {
+Hrmsbase.method('showDomElement', function(title,element,closeCallback,closeCallbackData, isPlain) {
 	var that = this;
 	var modelId = "";
 	if(isPlain){
@@ -955,32 +955,32 @@ IceHRMBase.method('showDomElement', function(title,element,closeCallback,closeCa
 	});
 });
 
-IceHRMBase.method('confirmDelete', function() {
+Hrmsbase.method('confirmDelete', function() {
 	if(this.deleteParams['id'] != undefined || this.deleteParams['id'] != null){
 		this.deleteObj(this.deleteParams['id'],[]);
 	}
 	$('#deleteModel').modal('hide');
 });
 
-IceHRMBase.method('cancelDelete', function() {
+Hrmsbase.method('cancelDelete', function() {
 	$('#deleteModel').modal('hide');
 	this.deleteParams['id'] = null;
 });
 
-IceHRMBase.method('closeMessage', function() {
+Hrmsbase.method('closeMessage', function() {
 	$('#messageModel').modal('hide');
 });
 
-IceHRMBase.method('cancelYesno', function() {
+Hrmsbase.method('cancelYesno', function() {
 	$('#yesnoModel').modal('hide');
 });
 
-IceHRMBase.method('closePlainMessage', function() {
+Hrmsbase.method('closePlainMessage', function() {
 	$('#plainMessageModel').modal('hide');
 	$('#dataMessageModel').modal('hide');
 });
 
-IceHRMBase.method('closeDataMessage', function() {
+Hrmsbase.method('closeDataMessage', function() {
     $('#dataMessageModel').modal('hide');
 });
 
@@ -992,7 +992,7 @@ IceHRMBase.method('closeDataMessage', function() {
  * @param successCallback {Function} this will get called after success response
  */
 
-IceHRMBase.method('save', function(callGetFunction, successCallback) {
+Hrmsbase.method('save', function(callGetFunction, successCallback) {
 	var validator = new FormValidation(this.getTableName()+"_submit",true,{'ShowPopup':false,"LabelErrorClass":"error"});
 	if(validator.checkValues()){
 		var params = validator.getFormParameters();
@@ -1014,7 +1014,7 @@ IceHRMBase.method('save', function(callGetFunction, successCallback) {
 });
 
 
-IceHRMBase.method('makeEmptyDateFieldsNull', function(params) {
+Hrmsbase.method('makeEmptyDateFieldsNull', function(params) {
 	var fields = this.getFormFields();
 	fields.forEach(function(field) {
 		if((field[1].type == 'date' || field[1].type == 'datetime')
@@ -1031,7 +1031,7 @@ IceHRMBase.method('makeEmptyDateFieldsNull', function(params) {
  * @param params {Array} keys and values in form
  * @returns {Array} modified parameters
  */
-IceHRMBase.method('forceInjectValuesBeforeSave', function(params) {
+Hrmsbase.method('forceInjectValuesBeforeSave', function(params) {
 	return params;
 });
 
@@ -1056,11 +1056,11 @@ IceHRMBase.method('forceInjectValuesBeforeSave', function(params) {
 	return null;
 });
  */
-IceHRMBase.method('doCustomValidation', function(params) {
+Hrmsbase.method('doCustomValidation', function(params) {
 	return null;
 });
 
-IceHRMBase.method('filterQuery', function() {
+Hrmsbase.method('filterQuery', function() {
 
 	var validator = new FormValidation(this.getTableName()+"_filter",true,{'ShowPopup':false,"LabelErrorClass":"error"});
 	if(validator.checkValues()){
@@ -1089,7 +1089,7 @@ IceHRMBase.method('filterQuery', function() {
 });
 
 
-IceHRMBase.method('getFilterString', function(filters) {
+Hrmsbase.method('getFilterString', function(filters) {
 
 	var str = '';
 	var rmf, source, values, select2MVal, value, valueOrig;
@@ -1184,7 +1184,7 @@ IceHRMBase.method('getFilterString', function(filters) {
  * @param params {Array} keys and values in form
  * @returns {Null or String} return null if validation success, returns error message if unsuccessful
  */
-IceHRMBase.method('doCustomFilterValidation', function(params) {
+Hrmsbase.method('doCustomFilterValidation', function(params) {
 	return true;
 });
 
@@ -1194,7 +1194,7 @@ IceHRMBase.method('doCustomFilterValidation', function(params) {
  * @method resetFilters
  */
 
-IceHRMBase.method('resetFilters', function() {
+Hrmsbase.method('resetFilters', function() {
 	this.filter = this.origFilter;
 	this.filtersAlreadySet = false;
 	$("#"+this.getTableName()+"_resetFilters").hide();
@@ -1205,7 +1205,7 @@ IceHRMBase.method('resetFilters', function() {
 
 
 
-IceHRMBase.method('showFilters', function(object) {
+Hrmsbase.method('showFilters', function(object) {
 	var formHtml = this.templates['filterTemplate'];
 	var html = "";
 	var fields = this.getFilters();
@@ -1302,7 +1302,7 @@ IceHRMBase.method('showFilters', function(object) {
  * @param object {Array} keys value list for populating form
  */
 
-IceHRMBase.method('preRenderForm', function(object) {
+Hrmsbase.method('preRenderForm', function(object) {
 
 });
 
@@ -1312,7 +1312,7 @@ IceHRMBase.method('preRenderForm', function(object) {
  * @param object {Array} keys value list for populating form
  */
 
-IceHRMBase.method('renderForm', function(object) {
+Hrmsbase.method('renderForm', function(object) {
 
 	var that = this;
     var signatureIds = [];
@@ -1484,7 +1484,7 @@ IceHRMBase.method('renderForm', function(object) {
 });
 
 
-IceHRMBase.method('retriveItemsAfterSave', function() {
+Hrmsbase.method('retriveItemsAfterSave', function() {
     return true;
 });
 
@@ -1501,7 +1501,7 @@ IceHRMBase.method('retriveItemsAfterSave', function() {
 	});
  */
 
-IceHRMBase.method('postRenderForm', function(object, $tempDomObj) {
+Hrmsbase.method('postRenderForm', function(object, $tempDomObj) {
 
 });
 
@@ -1512,7 +1512,7 @@ IceHRMBase.method('postRenderForm', function(object, $tempDomObj) {
  * @param field {Array} field meta data
  */
 
-IceHRMBase.method('dataGroupToHtml', function(val, field) {
+Hrmsbase.method('dataGroupToHtml', function(val, field) {
 	var data = JSON.parse(val),
 		deleteButton, t, sortFunction, item,key = null, i, html, template, itemHtml, itemVal;
 
@@ -1569,12 +1569,12 @@ IceHRMBase.method('dataGroupToHtml', function(val, field) {
  * @method resetDataGroup
  * @param field {Array} field meta data
  */
-IceHRMBase.method('resetDataGroup', function(field) {
+Hrmsbase.method('resetDataGroup', function(field) {
 	$("#"+field[0]).val("");
 	$("#"+field[0]+"_div").html("");
 });
 
-IceHRMBase.method('showDataGroup', function(field, object) {
+Hrmsbase.method('showDataGroup', function(field, object) {
 	var formHtml = this.templates['datagroupTemplate'];
 	var html = "";
 	var fields = field[1]['form'];
@@ -1677,7 +1677,7 @@ IceHRMBase.method('showDataGroup', function(field, object) {
 
 });
 
-IceHRMBase.method('addDataGroup', function() {
+Hrmsbase.method('addDataGroup', function() {
 	var field = this.currentDataGroupField, tempParams;
 	$("#"+this.getTableName()+"_field_"+field[0]+"_error").html("");
 	$("#"+this.getTableName()+"_field_"+field[0]+"_error").hide();
@@ -1730,7 +1730,7 @@ IceHRMBase.method('addDataGroup', function() {
 	}
 });
 
-IceHRMBase.method('nl2br' , function(str, len) {
+Hrmsbase.method('nl2br' , function(str, len) {
 	var t = "";
 	try{
 		var arr = str.split(" ");
@@ -1748,7 +1748,7 @@ IceHRMBase.method('nl2br' , function(str, len) {
 	return t;
 });
 
-IceHRMBase.method('makeDataGroupSortable', function(field, obj) {
+Hrmsbase.method('makeDataGroupSortable', function(field, obj) {
 	obj.data('field',field);
 	obj.data('firstSort',true);
 	obj.sortable({
@@ -1783,7 +1783,7 @@ IceHRMBase.method('makeDataGroupSortable', function(field, obj) {
 
 });
 
-IceHRMBase.method('orderDataGroup', function(field) {
+Hrmsbase.method('orderDataGroup', function(field) {
 	var newArr = [], id;
 	var list = $("#"+field[0]+"_div_inner [fieldid='"+field[0]+"_div']");
 	var val = $("#"+field[0]).val();
@@ -1807,7 +1807,7 @@ IceHRMBase.method('orderDataGroup', function(field) {
 });
 
 
-IceHRMBase.method('editDataGroup', function() {
+Hrmsbase.method('editDataGroup', function() {
 	var field = this.currentDataGroupField;
 	var id = this.currentDataGroupItemId;
 	var validator = new FormValidation(this.getTableName()+"_field_"+field[0],true,{'ShowPopup':false,"LabelErrorClass":"error"});
@@ -1877,7 +1877,7 @@ IceHRMBase.method('editDataGroup', function() {
 	}
 });
 
-IceHRMBase.method('editDataGroupItem', function(id) {
+Hrmsbase.method('editDataGroupItem', function(id) {
 	var fieldId = id.substring(0,id.lastIndexOf("_"));
 
 	var val = $("#"+fieldId).val();
@@ -1897,7 +1897,7 @@ IceHRMBase.method('editDataGroupItem', function(id) {
 
 });
 
-IceHRMBase.method('dataGroupGetNextAutoIncrementId', function(data) {
+Hrmsbase.method('dataGroupGetNextAutoIncrementId', function(data) {
 	var autoId = 1, id;
 	for(var i=0;i<data.length;i++){
 		item = data[i];
@@ -1915,7 +1915,7 @@ IceHRMBase.method('dataGroupGetNextAutoIncrementId', function(data) {
 });
 
 
-IceHRMBase.method('deleteDataGroupItem', function(id) {
+Hrmsbase.method('deleteDataGroupItem', function(id) {
 	var fieldId = id.substring(0,id.lastIndexOf("_"));
 
 	var val = $("#"+fieldId).val();
@@ -1947,7 +1947,7 @@ IceHRMBase.method('deleteDataGroupItem', function(id) {
  * @param formId {Array} field meta data
  */
 
-IceHRMBase.method('fillForm', function(object, formId, fields) {
+Hrmsbase.method('fillForm', function(object, formId, fields) {
 	var placeHolderVal;
 	if(fields == null || fields == undefined){
 		fields = this.getFormFields();
@@ -2073,12 +2073,12 @@ IceHRMBase.method('fillForm', function(object, formId, fields) {
  * @method cancel
  */
 
-IceHRMBase.method('cancel', function() {
+Hrmsbase.method('cancel', function() {
 	$("#"+this.getTableName()+'Form').hide();
 	$("#"+this.getTableName()).show();
 });
 
-IceHRMBase.method('renderFormField', function(field) {
+Hrmsbase.method('renderFormField', function(field) {
 	var userId = 0;
 	if(this.fieldTemplates[field[1].type] == undefined || this.fieldTemplates[field[1].type] == null){
 		return "";
@@ -2178,7 +2178,7 @@ IceHRMBase.method('renderFormField', function(field) {
 	return t;
 });
 
-IceHRMBase.method('renderFormSelectOptions', function(options, field) {
+Hrmsbase.method('renderFormSelectOptions', function(options, field) {
 	var html = "";
 
 	if(field != null && field != undefined){
@@ -2223,7 +2223,7 @@ IceHRMBase.method('renderFormSelectOptions', function(options, field) {
 
 });
 
-IceHRMBase.method('renderFormSelectOptionsRemote', function(options,field) {
+Hrmsbase.method('renderFormSelectOptionsRemote', function(options,field) {
 	var html = "";
 	if(field[1]['allow-null'] == true){
 		if(field[1]['null-label'] != undefined && field[1]['null-label'] != null){
@@ -2265,36 +2265,36 @@ IceHRMBase.method('renderFormSelectOptionsRemote', function(options,field) {
 
 });
 
-IceHRMBase.method('setTemplates', function(templates) {
+Hrmsbase.method('setTemplates', function(templates) {
 	this.templates = templates;
 });
 
-IceHRMBase.method('setCustomTemplates', function(templates) {
+Hrmsbase.method('setCustomTemplates', function(templates) {
 	this.customTemplates = templates;
 });
 
-IceHRMBase.method('setEmailTemplates', function(templates) {
+Hrmsbase.method('setEmailTemplates', function(templates) {
 	this.emailTemplates = templates;
 });
 
-IceHRMBase.method('getCustomTemplate', function(file) {
+Hrmsbase.method('getCustomTemplate', function(file) {
 	return this.customTemplates[file];
 });
 
-IceHRMBase.method('setFieldTemplates', function(templates) {
+Hrmsbase.method('setFieldTemplates', function(templates) {
 	this.fieldTemplates = templates;
 });
 
 
-IceHRMBase.method('getMetaFieldForRendering', function(fieldName) {
+Hrmsbase.method('getMetaFieldForRendering', function(fieldName) {
 	return "";
 });
 
-IceHRMBase.method('clearDeleteParams', function() {
+Hrmsbase.method('clearDeleteParams', function() {
 	this.deleteParams = {};
 });
 
-IceHRMBase.method('getShowAddNew', function() {
+Hrmsbase.method('getShowAddNew', function() {
 	return this.showAddNew;
 });
 
@@ -2303,7 +2303,7 @@ IceHRMBase.method('getShowAddNew', function() {
  * @method getAddNewLabel
  */
 
-IceHRMBase.method('getAddNewLabel', function() {
+Hrmsbase.method('getAddNewLabel', function() {
 	return "Add New";
 });
 
@@ -2313,7 +2313,7 @@ IceHRMBase.method('getAddNewLabel', function() {
  * @param showAddNew {Boolean} value
  */
 
-IceHRMBase.method('setShowAddNew', function(showAddNew) {
+Hrmsbase.method('setShowAddNew', function(showAddNew) {
 	this.showAddNew = showAddNew;
 });
 
@@ -2322,7 +2322,7 @@ IceHRMBase.method('setShowAddNew', function(showAddNew) {
  * @method setShowDelete
  * @param val {Boolean} value
  */
-IceHRMBase.method('setShowDelete', function(val) {
+Hrmsbase.method('setShowDelete', function(val) {
 	this.showDelete = val;
 });
 
@@ -2333,7 +2333,7 @@ IceHRMBase.method('setShowDelete', function(val) {
  * @param val {Boolean} value
  */
 
-IceHRMBase.method('setShowEdit', function(val) {
+Hrmsbase.method('setShowEdit', function(val) {
 	this.showEdit = val;
 });
 
@@ -2344,7 +2344,7 @@ IceHRMBase.method('setShowEdit', function(val) {
  */
 
 
-IceHRMBase.method('setShowSave', function(val) {
+Hrmsbase.method('setShowSave', function(val) {
 	this.showSave = val;
 });
 
@@ -2355,7 +2355,7 @@ IceHRMBase.method('setShowSave', function(val) {
  * @param val {Boolean} value
  */
 
-IceHRMBase.method('setShowCancel', function(val) {
+Hrmsbase.method('setShowCancel', function(val) {
 	this.showCancel = val;
 });
 
@@ -2366,11 +2366,11 @@ IceHRMBase.method('setShowCancel', function(val) {
  */
 
 
-IceHRMBase.method('getCustomTableParams', function() {
+Hrmsbase.method('getCustomTableParams', function() {
 	return {};
 });
 
-IceHRMBase.method('getActionButtons', function(obj) {
+Hrmsbase.method('getActionButtons', function(obj) {
 	return modJs.getActionButtonsHtml(obj.aData[0],obj.aData);
 });
 
@@ -2383,7 +2383,7 @@ IceHRMBase.method('getActionButtons', function(obj) {
  * @returns {String} html for action buttons
  */
 
-IceHRMBase.method('getActionButtonsHtml', function(id,data) {
+Hrmsbase.method('getActionButtonsHtml', function(id,data) {
 	var editButton = '<img class="tableActionButton" src="_BASE_images/edit.png" style="cursor:pointer;" rel="tooltip" title="Edit" onclick="modJs.edit(_id_);return false;"></img>';
 	var deleteButton = '<img class="tableActionButton" src="_BASE_images/delete.png" style="margin-left:15px;cursor:pointer;" rel="tooltip" title="Delete" onclick="modJs.deleteRow(_id_);return false;"></img>';
 	var cloneButton = '<img class="tableActionButton" src="_BASE_images/clone.png" style="margin-left:15px;cursor:pointer;" rel="tooltip" title="Copy" onclick="modJs.copyRow(_id_);return false;"></img>';
@@ -2420,7 +2420,7 @@ IceHRMBase.method('getActionButtonsHtml', function(id,data) {
  * @returns {String} random string
  */
 
-IceHRMBase.method('generateRandom', function(length) {
+Hrmsbase.method('generateRandom', function(length) {
 	var d = new Date();
 	var chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	var result = '';
@@ -2430,7 +2430,7 @@ IceHRMBase.method('generateRandom', function(length) {
 
 
 
-IceHRMBase.method('checkFileType', function (elementName, fileTypes) {
+Hrmsbase.method('checkFileType', function (elementName, fileTypes) {
 	var fileElement = document.getElementById(elementName);
 	var fileExtension = "";
 	if (fileElement.value.lastIndexOf(".") > 0) {
@@ -2452,14 +2452,14 @@ IceHRMBase.method('checkFileType', function (elementName, fileTypes) {
 
 });
 
-IceHRMBase.method('clearFileElement', function (elementName) {
+Hrmsbase.method('clearFileElement', function (elementName) {
 
 	var control = $("#"+elementName);
 	control.replaceWith( control = control.val('').clone( true ) );
 });
 
 
-IceHRMBase.method('fixJSON', function (json) {
+Hrmsbase.method('fixJSON', function (json) {
 	if(this.noJSONRequests == "1"){
 		json = json.replace(/"/g,'|');
 	}
@@ -2467,7 +2467,7 @@ IceHRMBase.method('fixJSON', function (json) {
 });
 
 
-IceHRMBase.method('getClientDate', function (date) {
+Hrmsbase.method('getClientDate', function (date) {
 
 	var offset = this.getClientGMTOffset();
     var tzDate = date.addMinutes(offset*60);
@@ -2475,7 +2475,7 @@ IceHRMBase.method('getClientDate', function (date) {
 
 });
 
-IceHRMBase.method('getClientGMTOffset', function () {
+Hrmsbase.method('getClientGMTOffset', function () {
 
 	var rightNow = new Date();
 	var jan1 = new Date(rightNow.getFullYear(), 0, 1, 0, 0, 0, 0);
@@ -2493,21 +2493,21 @@ IceHRMBase.method('getClientGMTOffset', function () {
  * @returns {String} help link
  */
 
-IceHRMBase.method('getHelpLink', function () {
+Hrmsbase.method('getHelpLink', function () {
 
 	return null;
 
 });
 
-IceHRMBase.method('showLoader', function () {
+Hrmsbase.method('showLoader', function () {
 	$('#iceloader').show();
 });
 
-IceHRMBase.method('hideLoader', function () {
+Hrmsbase.method('hideLoader', function () {
 	$('#iceloader').hide();
 });
 
-IceHRMBase.method('generateOptions', function (data) {
+Hrmsbase.method('generateOptions', function (data) {
     var template = '<option value="__val__">__text__</option>';
     var options = "";
     for(index in data){
@@ -2517,7 +2517,7 @@ IceHRMBase.method('generateOptions', function (data) {
     return options;
 });
 
-IceHRMBase.method('isModuleInstalled', function (type, name) {
+Hrmsbase.method('isModuleInstalled', function (type, name) {
     if(modulesInstalled == undefined || modulesInstalled == null){
         return false;
     }
